@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.music_projekt.ResetPass">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to bottom right, #2f3f89, #9231b5);" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="MICROPHONE" layoutX="143.0" layoutY="235.0" size="100" />
+            <Text fill="WHITE" layoutX="53.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evidenca radijskih postaj">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="text_username_reset" layoutX="53.0" layoutY="115.0" promptText="Vpišite uporabniško ime" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="text_novo_geslo" disable="true" layoutX="114.0" layoutY="378.0" promptText="Vpišite geslo" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="USER" layoutX="27.0" layoutY="139.0" size="20" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="KEY" layoutX="86.0" layoutY="401.0" size="20" />
+            <Button fx:id="gumb_isci_mail" layoutX="236.0" layoutY="113.0" mnemonicParsing="false" onAction="#isci" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-cursor: hand;" text="Išči" textFill="WHITE" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="USERS" layoutX="153.0" layoutY="61.0" size="40" wrappingWidth="43.35714244842529" />
+            <Text fill="#0096ff" layoutX="89.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to bottom right, #2f3f89, #9231b5);" text="Sprememba gesla">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="gumb_registracija" layoutX="134.0" layoutY="445.0" style="-fx-cursor: hand; -fx-text-fill: linear-gradient(to bottom right, #2f3f89, #9231b5);" text="Nimaš računa?" />
+            <TextField fx:id="text_email_s" disable="true" layoutX="62.0" layoutY="177.0" prefHeight="28.0" prefWidth="247.0" promptText="Vpišite e-poštni naslov" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="USER" layoutX="36.0" layoutY="201.0" size="20" />
+            <TextField fx:id="text_vprasanje_s" disable="true" editable="false" layoutX="62.0" layoutY="215.0" prefHeight="28.0" prefWidth="248.0" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="USER" layoutX="36.0" layoutY="239.0" size="20" />
+            <TextField fx:id="text_odgovor_s" disable="true" layoutX="62.0" layoutY="261.0" prefHeight="28.0" prefWidth="250.0" promptText="Vpišite odgovor" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="USER" layoutX="36.0" layoutY="285.0" size="20" />
+            <Button fx:id="gumb_preveri_odg" disable="true" layoutX="133.0" layoutY="311.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-cursor: hand;" text="Preveri kodo" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

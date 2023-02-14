@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.music_projekt.PassResetEnd">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to bottom right, #2f3f89, #9231b5);" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="MICROPHONE" layoutX="143.0" layoutY="235.0" size="100" />
+            <Text fill="WHITE" layoutX="53.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evidenca radijskih postaj">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+         <children>
+            <PasswordField fx:id="novo_geslo_ponovno" layoutX="115.0" layoutY="250.0" promptText="Ponovite novo geslo" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="KEY" layoutX="87.0" layoutY="273.0" size="20" />
+            <Button fx:id="gumb_spremeni_geslo" layoutX="122.0" layoutY="338.0" mnemonicParsing="false" onAction="#spremeni_click" prefHeight="32.0" prefWidth="107.0" style="-fx-background-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-cursor: hand;" text="Spremeni geslo" textFill="WHITE" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="USERS" layoutX="154.0" layoutY="109.0" size="40" wrappingWidth="43.35714244842529" />
+            <Text fill="#0096ff" layoutX="89.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to bottom right, #2f3f89, #9231b5);" text="Sprememba gesla">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="vono_geslo" layoutX="115.0" layoutY="203.0" promptText="Vpišite novo geslo" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="KEY" layoutX="87.0" layoutY="226.0" size="20" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

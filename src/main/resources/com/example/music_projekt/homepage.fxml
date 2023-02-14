@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.music_projekt.Homepage">
+   <children>
+      <StackPane layoutX="120.0" layoutY="86.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <left>
+                        <AnchorPane prefHeight="600.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="600.0" prefWidth="214.0" styleClass="nav-form" stylesheets="@home_design.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button fx:id="zaposleni_btn" layoutX="14.0" layoutY="315.0" mnemonicParsing="false" onAction="#spremeniStran" prefHeight="35.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-text-fill: #fff; -fx-font-size: 14px; -fx-font-family: Arial;" styleClass="nav-btn" stylesheets="@home_design.css" text="Zaposleni">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="USER" size="1.2em" />
+                                       </graphic>
+                                    </Button>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="73.0" layoutY="145.0" size="8em" />
+                                    <Label layoutX="61.0" layoutY="159.0" text="Dobrodošel," textFill="WHITE">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="username" alignment="CENTER" layoutX="6.0" layoutY="192.0" prefHeight="23.0" prefWidth="203.0" text="Username" textFill="#6a5fff">
+                                       <font>
+                                          <Font name="Arial Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="radijske_postaje_btn" layoutX="14.0" layoutY="280.0" mnemonicParsing="false" onAction="#spremeniStran" prefHeight="35.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@home_design.css" text="Radijske postaje">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="MICROPHONE" size="1.2em" />
+                                       </graphic>
+                                    </Button>
+                                    <Line endX="87.0" layoutX="114.0" layoutY="246.0" startX="-100.0" stroke="WHITE" />
+                                    <Button fx:id="logout_btn" layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#logout" styleClass="login-btn" stylesheets="@home_design.css" text="Odjavi se" textFill="WHITE">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="1.5em" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane fx:id="radijske_postaje_tab" layoutX="125.0" layoutY="165.0" prefHeight="600.0" prefWidth="886.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane fx:id="akcija_r" layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="272.0" stylesheets="@home_design.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <TextField fx:id="ime_r" layoutX="100.0" layoutY="89.0" styleClass="textfield" stylesheets="@home_design.css" />
+                                          <Label layoutX="61.0" layoutY="91.0" text="Ime:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="frekvenca_r" layoutX="100.0" layoutY="126.0" styleClass="textfield" stylesheets="@home_design.css" />
+                                          <Label layoutX="23.0" layoutY="129.0" text="Frekvenca:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="kraj_r" layoutX="100.0" layoutY="165.0" prefHeight="26.0" prefWidth="158.0" styleClass="combo-box" stylesheets="@home_design.css" />
+                                          <Label layoutX="61.0" layoutY="167.0" text="Kraj:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="dodaj_r" layoutX="31.0" layoutY="275.0" mnemonicParsing="false" onAction="#dodaj_click" prefHeight="49.0" prefWidth="88.0" styleClass="add-btn" stylesheets="@home_design.css" text="Dodaj" />
+                                          <Button fx:id="posodobi_r" layoutX="154.0" layoutY="275.0" mnemonicParsing="false" onAction="#radioUpdate" prefHeight="49.0" prefWidth="88.0" styleClass="update-btn" stylesheets="@home_design.css" text="Posodobi" />
+                                          <Button fx:id="pocisti_r" layoutX="31.0" layoutY="353.0" mnemonicParsing="false" onAction="#pocistiRadio" prefHeight="49.0" prefWidth="88.0" styleClass="clear-btn" stylesheets="@home_design.css" text="Počisti" />
+                                          <Button fx:id="izbrisi_r" layoutX="154.0" layoutY="353.0" mnemonicParsing="false" onAction="#radioDelete" prefHeight="49.0" prefWidth="88.0" styleClass="delete-btn" stylesheets="@home_design.css" text="Izbriši" />
+                                          <TextField fx:id="id_r" editable="false" layoutX="101.0" layoutY="52.0" prefHeight="26.0" prefWidth="154.0" styleClass="textfield" stylesheets="@home_design.css" />
+                                          <Label layoutX="70.0" layoutY="53.0" text="ID:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="izpis_btn" layoutX="92.0" layoutY="460.0" mnemonicParsing="false" onAction="#radioExcel" prefHeight="49.0" prefWidth="88.0" styleClass="clear-btn" stylesheets="@home_design.css" text="Izpis" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="tabela_r" layoutX="307.0" layoutY="14.0" prefHeight="572.0" prefWidth="560.0" stylesheets="@home_design.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="table_view_r" layoutX="15.0" layoutY="58.0" onMouseClicked="#radioIzbrano" prefHeight="500.0" prefWidth="531.0">
+                                            <columns>
+                                                <TableColumn fx:id="tab_id_r" minWidth="0.0" prefWidth="36.79998779296875" text="ID" />
+                                              <TableColumn fx:id="tab_ime_r" prefWidth="143.20001220703125" text="Ime" />
+                                              <TableColumn fx:id="tab_frekvenca_r" prefWidth="61.599945068359375" text="Frekvenca" />
+                                                <TableColumn fx:id="tab_kraj_r" prefWidth="135.199951171875" text="Kraj" />
+                                                <TableColumn fx:id="tab_zaposleni_r" prefWidth="88.800048828125" text="Št. zaposlenih" />
+                                                <TableColumn fx:id="tab_zvrsti_r" minWidth="0.0" prefWidth="65.60003662109375" text="Št. zvrsti" />
+                                            </columns>
+                                          </TableView>
+                                          <TextField fx:id="isci_r" layoutX="14.0" layoutY="14.0" onAction="#radioIsci" prefHeight="30.0" prefWidth="202.0" promptText="Išči" styleClass="search" stylesheets="@home_design.css" />
+                                          <FontAwesomeIconView glyphName="SEARCH" layoutX="21.0" layoutY="35.0" size="1.5em" text="" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="zaposleni_form" layoutX="14.0" layoutY="58.0" prefHeight="600.0" prefWidth="885.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane fx:id="zaposelni_oboje" layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="854.0" stylesheets="@home_design.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane fx:id="zaposleni_tab" prefHeight="330.0" prefWidth="854.0" stylesheets="@home_design.css">
+                                             <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                             <children>
+                                                <TextField fx:id="iskanje_z" layoutX="14.0" layoutY="14.0" onAction="#zaposleniIsci" prefHeight="30.0" prefWidth="202.0" promptText="Iskanje" styleClass="search" stylesheets="@home_design.css" />
+                                                <FontAwesomeIconView glyphName="SEARCH" layoutX="19.0" layoutY="35.0" size="1.5em" />
+                                                <TableView fx:id="table_view_z" layoutX="14.0" layoutY="59.0" onMouseClicked="#zaposleniIzbrano" prefHeight="259.0" prefWidth="827.0">
+                                                  <columns>
+                                                      <TableColumn fx:id="tab_id_z" prefWidth="27.999982833862305" text="ID" />
+                                                    <TableColumn fx:id="tab_ime_z" prefWidth="129.60001373291016" text="Ime" />
+                                                    <TableColumn fx:id="tab_priimek_z" prefWidth="149.5999755859375" text="Priimek" />
+                                                      <TableColumn fx:id="tab_email_z" prefWidth="223.19998168945312" text="E-pošta" />
+                                                      <TableColumn fx:id="tab_polozaj_z" prefWidth="154.39996337890625" text="Položaj" />
+                                                      <TableColumn fx:id="tab_radio_z" prefWidth="142.39996337890625" text="Radijska postaja" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                          <Label layoutX="127.0" layoutY="404.0" text="Ime:">
+                                             <font>
+                                                <Font name="Tahoma" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="ime_z" layoutX="158.0" layoutY="399.0" prefHeight="26.0" prefWidth="173.0" styleClass="textfield" stylesheets="@home_design.css" />
+                                          <Label layoutX="109.0" layoutY="442.0" text="Priimek:">
+                                             <font>
+                                                <Font name="Tahoma" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="priimek_z" layoutX="158.0" layoutY="437.0" prefHeight="26.0" prefWidth="173.0" styleClass="textfield" stylesheets="@home_design.css" />
+                                          <Label layoutX="426.0" layoutY="364.0" text="E-pošta:">
+                                             <font>
+                                                <Font name="Tahoma" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="email_z" layoutX="477.0" layoutY="359.0" prefHeight="26.0" prefWidth="173.0" styleClass="textfield" stylesheets="@home_design.css" />
+                                          <Label layoutX="427.0" layoutY="403.0" text="Položaj:">
+                                             <font>
+                                                <Font name="Tahoma" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="polozaj_z" layoutX="477.0" layoutY="398.0" prefHeight="26.0" prefWidth="174.0" styleClass="combo-box" stylesheets="@home_design.css" />
+                                          <Label layoutX="380.0" layoutY="440.0" text="Radijska postaja:">
+                                             <font>
+                                                <Font name="Tahoma" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="radio_z" layoutX="477.0" layoutY="435.0" prefHeight="26.0" prefWidth="175.0" styleClass="combo-box" stylesheets="@home_design.css" />
+                                          <Button fx:id="gumb_dodaj_z" layoutX="123.0" layoutY="485.0" mnemonicParsing="false" onAction="#dodaj_z_click" prefHeight="50.0" prefWidth="70.0" styleClass="add-btn" stylesheets="@home_design.css" text="Dodaj" />
+                                          <Button fx:id="gumb_pocisti_z" layoutX="268.0" layoutY="485.0" mnemonicParsing="false" onAction="#pocistiZaposleni" prefHeight="50.0" prefWidth="70.0" styleClass="clear-btn" stylesheets="@home_design.css" text="Počisti" />
+                                          <Button fx:id="gumb_posodobi_z" layoutX="413.0" layoutY="485.0" mnemonicParsing="false" onAction="#zaposleniUpdate" prefHeight="50.0" prefWidth="76.0" styleClass="update-btn" stylesheets="@home_design.css" text="Posodobi" />
+                                          <Button fx:id="gumb_izbrisi_z" layoutX="558.0" layoutY="485.0" mnemonicParsing="false" onAction="#zaposleniDelete" prefHeight="50.0" prefWidth="70.0" styleClass="delete-btn" stylesheets="@home_design.css" text="Izbriši" />
+                                          <Label layoutX="135.0" layoutY="366.0" text="ID:">
+                                             <font>
+                                                <Font name="Tahoma" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="id_z" editable="false" layoutX="158.0" layoutY="361.0" prefHeight="26.0" prefWidth="173.0" styleClass="textfield" stylesheets="@home_design.css" />
+                                          <Button fx:id="gumb_izpis_z" layoutX="700.0" layoutY="411.0" mnemonicParsing="false" onAction="#zaposleniExcel" prefHeight="48.0" prefWidth="110.0" styleClass="delete-btn" stylesheets="@home_design.css" text="Izpis" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.music_projekt.Login">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to bottom right, #2f3f89, #9231b5);" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="MICROPHONE" layoutX="143.0" layoutY="235.0" size="100" />
+            <Text fill="WHITE" layoutX="53.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evidenca radijskih postaj">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="text_username" layoutX="116.0" layoutY="199.0" promptText="Vpišite uporabniško ime" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="text_geslo" layoutX="116.0" layoutY="250.0" promptText="Vpišite geslo" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="USER" layoutX="91.0" layoutY="223.0" size="20" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="KEY" layoutX="88.0" layoutY="273.0" size="20" />
+            <Button fx:id="gumb_vpisi_se" layoutX="134.0" layoutY="339.0" mnemonicParsing="false" onAction="#login_click" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: linear-gradient(to bottom right, #2f3f89, #9231b5); -fx-cursor: hand;" text="Vpiši se" textFill="WHITE" />
+            <FontAwesomeIconView fill="#9231b5" glyphName="USERS" layoutX="154.0" layoutY="109.0" size="40" wrappingWidth="43.35714244842529" />
+            <Text fill="#0096ff" layoutX="155.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to bottom right, #2f3f89, #9231b5);" text="Vpis">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="gumb_registracija" layoutX="132.0" layoutY="411.0" style="-fx-cursor: hand; -fx-text-fill: linear-gradient(to bottom right, #2f3f89, #9231b5);" text="Nimaš računa?" />
+            <Hyperlink fx:id="gumb_pozabljeno_geslo" layoutX="124.0" layoutY="443.0" onAction="#pozabljeno" style="-fx-cursor: hand; -fx-text-fill: linear-gradient(to bottom right, #2f3f89, #9231b5);" text="Pozabljeno geslo?" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
